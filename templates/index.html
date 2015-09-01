@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplu legislatie.just.ro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <h1>Exemplu legislatie.just.ro</h1>
+          <p>În NumarPagina si RezultatePagina trebuie neaparat <em>0</em>.</p>
+          <form action="/search" method="post">
+            <div class="form-group">
+              <label for="NumarPagina">NumarPagina:</label>
+              <input type="text" class="form-control" name="NumarPagina" required placeholder="0">
+            </div>
+            <div class="form-group">
+              <label for="RezultatePagina">RezultatePagina:</label>
+              <input type="text" class="form-control" name="RezultatePagina" required placeholder="0">
+            </div>
+            <div class="form-group">
+              <label for="SearchAn">SearchAn:</label>
+              <input type="text" class="form-control" name="SearchAn">
+            </div>
+            <div class="form-group">
+              <label for="SearchNumar">SearchNumar:</label>
+              <input type="text" class="form-control" name="SearchNumar">
+            </div>
+            <div class="form-group">
+              <label for="SearchTitlu">SearchTitlu:</label>
+              <input type="text" class="form-control" name="SearchTitlu">
+            </div>
+            <button type="submit" class="btn btn-default">Trimite</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
