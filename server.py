@@ -13,7 +13,7 @@ def hello():
 def search():
     client = LegislatieJustClient()
     params = {v: request.form[v] for k, v in enumerate(request.form)}
-    results = client.search(params).Legi
+    results = client.search(params)
     return render_template('search.html', laws=results)
 
 if __name__ == "__main__":

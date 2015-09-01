@@ -24,7 +24,7 @@ class LegislatieJustClient:
         if 'SearchText' in params:
             search_model.SearchText = params['SearchText']
 
-        return self.client.service.Search(search_model, self.token)
+        return self.client.service.Search(search_model, self.token).Legi
 
 if __name__ == '__main__':
     client = LegislatieJustClient()
