@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from suds.client import Client
 
 url = 'http://legislatie.just.ro/apiws/FreeWebService.svc?wsdl'
