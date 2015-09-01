@@ -9,33 +9,35 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <table class="table table-striped table-hover">
-          <thead>
-            <tr>
-              <td>DataVigoare</td>
-              <td>Emitent</td>
-              <td>LinkHtml</td>
-              <td>Numar</td>
-              <td>Publicatie</td>
-              <td>TipAct</td>
-            </tr>
-          </thead>
-          <tbody>
-            {% for law in laws %}
-            <tr>
-              <td colspan="100">{{law.Titlu}}</td>
-            </tr>
-            <tr>
-              <td>{{law.DataVigoare}}</td>
-              <td>{{law.Emitent}}</td>
-              <td><a href="{{law.LinkHtml}}">URL</a></td>
-              <td>{{law.Numar}}</td>
-              <td>{{law.Publicatie}}</td>
-              <td>{{law.TipAct}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+        <div class="col-xs-12">
+          <h1>Rezultate</h1>
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <td>Titlu</td>
+                <td>DataVigoare</td>
+                <td>Emitent</td>
+                <td>LinkHtml</td>
+                <td>Numar</td>
+                <td>Publicatie</td>
+                <td>TipAct</td>
+              </tr>
+            </thead>
+            <tbody>
+              {% for law in laws %}
+              <tr>
+                <td>{{law.Titlu}}</td>
+                <td>{{law.DataVigoare}}</td>
+                <td>{{law.Emitent}}</td>
+                <td><a href="{{law.LinkHtml}}">URL</a></td>
+                <td>{{law.Numar}}</td>
+                <td>{{law.Publicatie}}</td>
+                <td>{{law.TipAct}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </body>
