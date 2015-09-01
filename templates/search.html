@@ -4,13 +4,38 @@
     <title>Exemplu legislatie.just.ro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+      .text {
+        display: none;
+      }
+    </style>
+    <script>
+      $(function(){
+        window.isTextShown = false;
+      });
+      function toggleText() {
+        if (window.isTextShown) {
+          $('.text').each(function(elem) {
+            $(this).css('display', 'none')
+          });
+          window.isTextShown = false
+        } else {
+          $('.text').each(function(elem) {
+            $(this).css('display', 'table-cell')
+          });
+          window.isTextShown = true
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
           <h1>Rezultate</h1>
+          <a href="#" id="show-text" onclick=toggleText()>Arata/ascunde text</a>
           <table class="table table-striped table-hover">
             <thead>
               <tr>
@@ -33,6 +58,9 @@
                 <td>{{law.Numar}}</td>
                 <td>{{law.Publicatie}}</td>
                 <td>{{law.TipAct}}</td>
+              </tr>
+              <tr>
+                <td class="text" colspan="100">{{law.Text}}</td>
               </tr>
               {% endfor %}
             </tbody>
