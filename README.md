@@ -22,7 +22,7 @@ Un server de Flask cu un formular și interfața de afișare a rezultatelor.
 
 ## `script.py`
 
-Întoarce ultimele 10 legi apărute pe portal.
+Întoarce primele 10 legi.
 
 ## `script2.py`
 
