@@ -8,7 +8,7 @@ Documentația se găsește [aici](http://legislatie.just.ro/ServiciulWebLegislat
 Pentru a rula exemplele:
 
 ```
-pip3 install suds-jurko
+pip3 install -r requirements.txt
 python3 script.py
 ```
 
