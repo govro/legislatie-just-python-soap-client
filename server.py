@@ -8,6 +8,7 @@ app = Flask(__name__)
 def hello():
     return render_template('index.html')
 
+
 @app.route("/search", methods=['POST'])
 def search():
     client = LegislatieJustClient()

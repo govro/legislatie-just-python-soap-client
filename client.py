@@ -1,5 +1,6 @@
 from suds.client import Client
 
+
 class LegislatieJustClient:
     def __init__(self):
         self.url = 'http://legislatie.just.ro/apiws/FreeWebService.svc?wsdl'
