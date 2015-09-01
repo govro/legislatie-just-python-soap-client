@@ -12,6 +12,14 @@ pip3 install suds-jurko
 python3 script.py
 ```
 
+## `client.py`
+
+Client simplu care abstractizează întreaga arhitectură SOAP.
+
+## `server.py`
+
+Un server de Flask cu un formular și interfața de afișare a rezultatelor.
+
 ## `script.py`
 
 Întoarce ultimele 10 legi apărute pe portal.
