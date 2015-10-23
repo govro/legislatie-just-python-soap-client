@@ -3,13 +3,14 @@
 from suds.client import Client
 import suds
 import sys
+import os
 import time
 import argparse
 
 # Constants
 
 url = 'http://legislatie.just.ro/apiws/FreeWebService.svc?wsdl'
-path = 'saved_results.' + str(int(time.time())) + '.txt';
+path = 'saved_results.' + str(int(time.time())) + '.' + str(os.getpid()) + '.txt';
 
 # Command-line option parsing
 
