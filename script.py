@@ -2,9 +2,26 @@
 
 from suds.client import Client
 import suds
+import sys
 import time
+import argparse
+
+# Constants
 
 url = 'http://legislatie.just.ro/apiws/FreeWebService.svc?wsdl'
+path = 'saved_results.' + str(int(time.time())) + '.txt';
+
+# Command-line option parsing
+
+parser = argparse.ArgumentParser(description='Benchmark legislatie.just.ro')
+parser.add_argument("-n", "--lowest", dest="from",
+                    help="fetch pages from PAGE", metavar="PAGE", default=0)
+parser.add_argument("-N", "--highest", dest="to",
+                    help="fetch pages up to PAGE", metavar="PAGE", default=1000)
+
+args = vars(parser.parse_args())
+
+# Script
 
 print("==== create client")
 client = Client(url)
@@ -17,13 +34,12 @@ print(token)
 print("==== do search")
 search_model = client.factory.create('SearchModel')
 
-NUM_PAGES = 1000
-path = 'saved_results.' + str(int(time.time())) + '.txt';
-
 print("==== saving results to {0}\n".format(path))
 
 with open(path, 'w') as f:
-    for i in range(NUM_PAGES):
+    n = int(args['from'])
+    N = int(args['to'])
+    for i in range(n, N):
         search_model.NumarPagina = i
         search_model.RezultatePagina = 0
 
