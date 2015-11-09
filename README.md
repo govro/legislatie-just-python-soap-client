@@ -27,3 +27,7 @@ Un server de Flask cu un formular și interfața de afișare a rezultatelor.
 ## `script2.py`
 
 Caută legile din 2014 care conțin în titlu cuvântul `medici`.
+
+## `master.py`
+
+Spawn processes of `script.py` and start downloading the entire database.
